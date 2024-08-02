@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bookstore.ProductController">
+    <children>
+        <TableView fx:id="id_tableProduct" layoutX="574.0" layoutY="14.0" onMouseClicked="#getItem" prefHeight="575.0" prefWidth="366.0">
+            <columns>
+                <TableColumn fx:id="id_masp" prefWidth="84.0" text="Mã sản phẩm" />
+                <TableColumn fx:id="id_tensp" prefWidth="67.0" text="Tên sach" />
+                <TableColumn fx:id="id_mota" minWidth="7.2000732421875" prefWidth="51.5" text="Mô tả" />
+                <TableColumn fx:id="id_maloai" maxWidth="167.20001220703125" prefWidth="60.0" text="Tên Loại" />
+                <TableColumn fx:id="id_gia" prefWidth="40.5" text="Giá" />
+            <TableColumn fx:id="id_tacgia" maxWidth="99.0" prefWidth="62.0" text="Tac Gia" />
+            </columns>
+        </TableView>
+          <TextField fx:id="MoTa" layoutX="347.0" layoutY="314.0" prefHeight="34.0" prefWidth="208.0" />
+          <TextField fx:id="MaSp" layoutX="347.0" layoutY="73.0" prefHeight="34.0" prefWidth="208.0" />
+          <TextField fx:id="TenSp" layoutX="347.0" layoutY="130.0" prefHeight="34.0" prefWidth="208.0" />
+          <Label layoutX="255.0" layoutY="320.0" text="Mô tả">
+              <font>
+                  <Font name="System Bold" size="17.0" />
+              </font>
+          </Label>
+          <Label layoutX="255.0" layoutY="79.0" prefHeight="22.0" prefWidth="65.0" text="Mã sách">
+              <font>
+                  <Font name="System Bold" size="17.0" />
+              </font>
+          </Label>
+          <Label layoutX="255.0" layoutY="136.0" text="Tên sách">
+              <font>
+                  <Font name="System Bold" size="17.0" />
+              </font>
+          </Label>
+          <Label layoutX="325.0" layoutY="14.0" text="Sản phẩm">
+              <font>
+                  <Font name="System Bold" size="30.0" />
+              </font>
+          </Label>
+          <Button fx:id="btnAdd" layoutX="307.0" layoutY="451.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="34.0" prefWidth="74.0" styleClass="btn" stylesheets="@login.css" text="Thêm" />
+          <Button fx:id="btnUpdate" layoutX="395.0" layoutY="451.0" mnemonicParsing="false" onAction="#updatePro" prefHeight="34.0" prefWidth="74.0" styleClass="btn" stylesheets="@login.css" text="Cập nhật" />
+          <Button fx:id="btnDelete" layoutX="307.0" layoutY="492.0" mnemonicParsing="false" onAction="#deletePro" prefHeight="34.0" prefWidth="74.0" styleClass="btn" stylesheets="@login.css" text="Xóa" />
+          <Button fx:id="btnDelete1" layoutX="395.0" layoutY="492.0" mnemonicParsing="false" onAction="#clear" prefHeight="34.0" prefWidth="74.0" styleClass="btn" stylesheets="@login.css" text="Clear" />
+          <Label layoutX="257.0" layoutY="183.0" text="Giá">
+              <font>
+                  <Font name="System Bold" size="17.0" />
+              </font>
+          </Label>
+          <TextField fx:id="Gia" layoutX="347.0" layoutY="177.0" prefHeight="34.0" prefWidth="208.0" />
+      <Label layoutX="255.0" layoutY="228.0" prefHeight="22.0" prefWidth="56.0" text="Tác giả">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="255.0" layoutY="274.0" text="Thể loại">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Pane layoutY="-4.0" prefHeight="611.0" prefWidth="242.0" style="-fx-background-color: #454545;">
+         <children>
+            <Button graphicTextGap="10.0" layoutY="285.0" mnemonicParsing="false" onAction="#billpage" prefHeight="35.0" prefWidth="242.0" styleClass="cate-btn" stylesheets="@login.css" text="Thanh toán" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="69.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="125.0" text="Welcome Back" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lgName1" layoutX="104.0" layoutY="155.0" text="toan" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+                <Button graphicTextGap="10.0" layoutY="242.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="242.0" styleClass="cate-btn" stylesheets="@login.css" text="Products" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+            <Button contentDisplay="CENTER" graphicTextGap="10.0" layoutX="-2.0" layoutY="200.0" mnemonicParsing="false" onAction="#catepage" prefHeight="35.0" prefWidth="242.0" styleClass="cate-btn" stylesheets="@login.css" text="Category" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/book.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="16.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/bill.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/book_btn.png" />
+               </image>
+            </ImageView>
+            <Button graphicTextGap="10.0" layoutY="322.0" mnemonicParsing="false" onAction="#nvPage" prefHeight="35.0" prefWidth="242.0" styleClass="cate-btn" stylesheets="@login.css" text="Nhân Viên" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button graphicTextGap="10.0" layoutY="357.0" mnemonicParsing="false" onAction="#tacgiapage" prefHeight="35.0" prefWidth="242.0" styleClass="cate-btn" stylesheets="@login.css" text="Tác Giả" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button graphicTextGap="10.0" layoutY="392.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="35.0" prefWidth="242.0" styleClass="cate-btn" stylesheets="@login.css" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="16.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/programmer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="16.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/classic.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="16.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ComboBox fx:id="author" layoutX="348.0" layoutY="222.0" prefHeight="34.0" prefWidth="208.0" />
+      <ComboBox fx:id="tenloai" layoutX="348.0" layoutY="268.0" prefHeight="34.0" prefWidth="208.0" />
+    </children>
+</Pane>

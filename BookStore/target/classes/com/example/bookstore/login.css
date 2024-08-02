@@ -1,0 +1,49 @@
+.login{
+    -fx-background-color: #43d3c8;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+
+.login:hover{
+    -fx-background-color: #31928AFF;
+}
+
+.input{
+    -fx-background-color: #ffffff;
+}
+.cate-btn{
+    -fx-background-color: transparent;
+}
+.cate-btn:hover{
+    -fx-background-color: #7c7c7c;
+    -fx-cursor: hand;
+}
+
+.btn{
+    -fx-background-color: #39A7FF;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+
+}
+.btn:hover{
+    -fx-background-color: #4f83ab;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-background-radius: 10px;
+    -fx-border-width: 2px;
+}
+
+.table-view .table-column{
+    -fx-alignment: center;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #87C4FF;
+    -fx-background-radius: 8px 8px 0px 0px;
+}
+
+
+

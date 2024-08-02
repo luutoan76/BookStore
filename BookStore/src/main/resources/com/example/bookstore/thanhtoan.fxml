@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bookstore.ThanhtoanController">
+    <children>
+        <Label layoutX="50.0" layoutY="127.0" text="Tên sách">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="388.0" layoutY="14.0" text="Thanh toán">
+            <font>
+                <Font size="35.0" />
+            </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="165.0" text="Số lượng">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="205.0" text="Giá tiền">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtGia" layoutX="171.0" layoutY="205.0" text="0đ">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button layoutX="97.0" layoutY="314.0" mnemonicParsing="false" onAction="#Detailadd" prefHeight="30.0" prefWidth="107.0" styleClass="btn" stylesheets="@login.css" text="Thêm sản phẩm" />
+        <TableView fx:id="id_tableDetail" layoutX="443.0" layoutY="78.0" prefHeight="204.0" prefWidth="494.0">
+            <columns>
+                <TableColumn fx:id="id_madetail" prefWidth="113.60003662109375" text="Mã hóa đơn" />
+                <TableColumn fx:id="id_tensach" prefWidth="99.20001220703125" text="Tên sách" />
+                <TableColumn fx:id="id_soluong" prefWidth="73.60003662109375" text="Số lượng" />
+                <TableColumn fx:id="id_gia" prefWidth="84.0" text="Giá" />
+                <TableColumn fx:id="id_tien" prefWidth="120.39996337890625" text="Tiền" />
+            </columns>
+        </TableView>
+        <TableView fx:id="id_tableHD" layoutX="443.0" layoutY="314.0" prefHeight="286.0" prefWidth="494.0">
+            <columns>
+                <TableColumn fx:id="id_mahd" prefWidth="106.4000244140625" text="Mã hóa đơn" />
+                <TableColumn fx:id="id_ngayin" prefWidth="196.7999267578125" text="Ngày in" />
+                <TableColumn fx:id="id_tongtien" prefWidth="190.4000244140625" text="Tổng tiền" />
+            </columns>
+        </TableView>
+        <TextField fx:id="Soluong" layoutX="171.0" layoutY="165.0" prefHeight="30.0" prefWidth="217.0" />
+        <Button layoutX="50.0" layoutY="78.0" mnemonicParsing="false" onAction="#InsertHD" prefHeight="30.0" prefWidth="107.0" styleClass="btn" stylesheets="@login.css" text="Tạo hóa đơn" />
+        <ComboBox fx:id="Tensach" layoutX="171.0" layoutY="127.0" prefHeight="30.0" prefWidth="217.0" />
+        <Button layoutX="214.0" layoutY="314.0" mnemonicParsing="false" onAction="#endThanhtoan" prefHeight="30.0" prefWidth="132.0" styleClass="btn" stylesheets="@login.css" text="Kết thúc thanh toán" />
+        <Label layoutX="50.0" layoutY="245.0" text="Tổng : ">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtTong" layoutX="171.0" layoutY="245.0" text="0đ">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>
